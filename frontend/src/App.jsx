@@ -11,12 +11,10 @@ function App() {
 
   return (
        <div>
-         
          <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home></Home>}>Home</Route>
           </Routes>
-         
         </BrowserRouter>
            
         </div>
