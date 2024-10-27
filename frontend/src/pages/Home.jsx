@@ -1,16 +1,16 @@
 import React from 'react'
-import Navbar from '../componets/Navbar'
-import Banner from '../componets/Banner'
-import Topseller from '../componets/Topseller'
-import Recomended from '../componets/Recomended'
+import Banner from '../componets/Home.Compo/Banner'
+import Topseller from '../componets/Home.Compo/Topseller'
+import Recomended from '../componets/Home.Compo/Recommened'
+import News from '../componets/Home.Compo/News'
+
 function Home() {
   return (
-    <div>
-      <Navbar></Navbar>
+    <div>       
       <Banner></Banner>
       <Topseller></Topseller>
       <Recomended></Recomended>
-     
+      <News></News>  
     </div>
   )
 }

@@ -15,7 +15,7 @@ const navigation = [
 ];
 
 const Navbar = () => {
-  const currentUser = true;
+  const currentUser = false;
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="flex items-center md:gap-12 gap-4">
             {/* Left side navigation */}
             <Link to="/">
-              <HiMiniBars3CenterLeft className="w-6 md:ml-5" aria-label="Menu" />
+              <HiMiniBars3CenterLeft className="w-6 size-6 md:ml-5" aria-label="Menu" />
             </Link>
             <div className="flex relative md:w-72 w-40 space-x-2">
               <IoIosSearch className="w-5 absolute md:left-3  left-2 inset-y-2" aria-label="Search Icon" />
@@ -63,12 +63,12 @@ const Navbar = () => {
                 </>
               ) : (
                 <Link to="/login">
-                  <FaUser className="w-6 mx-2" aria-label="Login" />
+                  <FaUser className="w-6 mx-2 size-5" aria-label="Login" />
                 </Link>
               )}
             </div>
             <button className="hidden sm:block" aria-label="Favorites">
-              <CiHeart className="w-6" />
+              <CiHeart className="size-6" />
             </button>
             <Link to="/cart" className="bg-primary p-1 sm:px-6 md:px-10 py-2 flex items-center rounded-lg md:mx-6">
               <FiShoppingCart aria-label="Shopping Cart" />
@@ -82,4 +82,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

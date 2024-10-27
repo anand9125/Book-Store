@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import BooksCard from './BooksCard';
+import BooksCard from './BookCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -31,7 +31,7 @@ function Topseller() {
       <div>
         <h2 className='text-2xl font-semibold m-6'>Top Seller</h2>
       </div>
-      <div className='m-6 h-screen'>
+      <div className='m-6 '>
         
         {/* Category Filtering */}
         <select

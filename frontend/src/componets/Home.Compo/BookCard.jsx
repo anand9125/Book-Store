@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiShoppingCart } from "react-icons/fi";
-import { getImgUrl } from '../utils/getImageUrl';
+import { getImgUrl } from '../../utils/getImageUrl';
 import { Link } from 'react-router-dom';
 
 const BooksCard = ({ book }) => {
@@ -25,9 +25,9 @@ const BooksCard = ({ book }) => {
             {book.description.length > 80 ? `${book.description.slice(0, 80)}...` : book.description}
           </p>
           <p className="font-medium mb-5">
-            {book.newPrice} <span className="line-through font-normal ml-2">{book.oldPrice}</span>
+            ${book.newPrice} <span className="line-through font-normal ml-2">${book.oldPrice}</span>
           </p>
-          <button className="bg-primary rounded-md h-9 px-6 space-x-1 flex items-center gap-1">
+          <button className="bg-primary rounded-md h-9 px-6 space-x-1 flex items-center gap-1 hover:bg-yellow-500">
             <FiShoppingCart />
             <span>Add to Cart</span>
           </button>
@@ -38,4 +38,3 @@ const BooksCard = ({ book }) => {
 };
 
 export default BooksCard;
-
