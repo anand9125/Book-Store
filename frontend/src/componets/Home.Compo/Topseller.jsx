@@ -29,6 +29,7 @@ function Topseller() {
   return (
     <div>
       <div>
+      
         <h2 className='text-2xl font-semibold m-6'>Top Seller</h2>
       </div>
       <div className='m-6 '>

@@ -6,7 +6,8 @@ import { FaUser } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import avatarImg from "../assets/avatar.png";
-
+import { useRecoilState } from 'recoil';
+import { cartState } from '../Recoil/Cart/atom';
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
   { name: "Orders", href: "/orders" },
@@ -15,8 +16,9 @@ const navigation = [
 ];
 
 const Navbar = () => {
-  const currentUser = false;
+const currentUser = true;
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [cartItems, setCartItems] = useRecoilState(cartState);
 
   return (
     <div>
@@ -57,7 +59,7 @@ const Navbar = () => {
                             <Link to={item.href}>{item.name}</Link>
                           </li>
                         ))}
-                      </ul>
+                       </ul>
                     </div>
                   )}
                 </>
@@ -67,12 +69,12 @@ const Navbar = () => {
                 </Link>
               )}
             </div>
-            <button className="hidden sm:block" aria-label="Favorites">
-              <CiHeart className="size-6" />
-            </button>
-            <Link to="/cart" className="bg-primary p-1 sm:px-6 md:px-10 py-2 flex items-center rounded-lg md:mx-6">
+             <button className="hidden sm:block" aria-label="Favorites">
+               <CiHeart className="size-6" />
+             </button>
+              <Link to="/cart" className="bg-primary p-1 sm:px-6 md:px-10 py-2 flex items-center rounded-lg md:mx-6">
               <FiShoppingCart aria-label="Shopping Cart" />
-              <span>0</span>
+              <span>{cartItems.length}</span>
             </Link>
           </div>
         </nav>

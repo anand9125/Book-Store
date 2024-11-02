@@ -1,9 +1,12 @@
 import React from 'react';
+import { useRecoilState } from 'recoil';
 import { FiShoppingCart } from "react-icons/fi";
 import { getImgUrl } from '../../utils/getImageUrl';
 import { Link } from 'react-router-dom';
+import useCartAction from './useCartAction';
 
 const BooksCard = ({ book }) => {
+  const {addToCart}=useCartAction();
   return (
     <div className="rounded-lg transition-shadow duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4">
@@ -27,7 +30,7 @@ const BooksCard = ({ book }) => {
           <p className="font-medium mb-5">
             ${book.newPrice} <span className="line-through font-normal ml-2">${book.oldPrice}</span>
           </p>
-          <button className="bg-primary rounded-md h-9 px-6 space-x-1 flex items-center gap-1 hover:bg-yellow-500">
+          <button onClick={() => addToCart(book)} className="bg-primary rounded-md h-9 px-6 space-x-1 flex items-center gap-1 hover:bg-yellow-500">
             <FiShoppingCart />
             <span>Add to Cart</span>
           </button>

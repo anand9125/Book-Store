@@ -41,17 +41,17 @@ function Register() {
                }
               <div>
               <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded focus:outline-none '>Login</button>
-               </div>
-                 <p className='pt-2'>
-                    Haven't an account? Please 
-                    <Link to="/login" className='text-blue-500 hover:text-blue-700'> Login !</Link>
-                 </p>
+              </div>
+                  <p className='pt-2'>
+                     Haven't an account? Please 
+                     <Link to="/login" className='text-blue-500 hover:text-blue-700'> Login !</Link>
+                  </p>
                 <div className='pt-2'>
-                 <button onClick={handleGoogleSignIn}
-                 className='w-full flex flex-wrap gap-1 items-cemter justify-center
-                  bg-secondary hover:bg-blue-500 hover:text-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none'>
-                  <FaGoogle  className='mr-2 mt-1'/>
-                  Resgister with Google
+                   <button onClick={handleGoogleSignIn}
+                    className='w-full flex flex-wrap gap-1 items-cemter justify-center
+                    bg-secondary hover:bg-blue-500 hover:text-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none'>
+                    <FaGoogle  className='mr-2 mt-1'/>
+                   Resgister with Google
                  </button>
                 </div>
                  <div>
